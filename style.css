@@ -23,7 +23,6 @@ body {
   background-size: 700px auto;
 }
 
-/* ---------- Header logo (non-landing pages) ---------- */
 
 #appHeader {
   display: flex;
@@ -41,7 +40,6 @@ body.view-landing #appHeader {
   display: none;
 }
 
-/* ---------- Landing page ---------- */
 
 #landingView {
   display: flex;
@@ -57,7 +55,6 @@ body.view-landing #appHeader {
   height: 550px;
 }
 
-/* ---------- Buttons: bubbly base style ---------- */
 
 button {
   font-family: 'Quicksand', sans-serif;
@@ -94,7 +91,6 @@ button:disabled {
   box-shadow: 0 6px 0 var(--color-primary-dark);
 }
 
-/* ---------- Two-column workspace: fixed left, scrolling right ---------- */
 
 .workspace {
   display: flex;
@@ -118,7 +114,6 @@ button:disabled {
   padding-right: 8px;
 }
 
-/* ---------- Section layout: title, then a grid of items ---------- */
 
 .control-section {
   margin: 0 0 28px;
@@ -139,7 +134,6 @@ button:disabled {
   gap: 10px;
 }
 
-/* ---------- Thumbnail-style asset buttons ---------- */
 
 .asset-btn {
   width: 64px;
@@ -165,7 +159,6 @@ button:disabled {
   box-shadow: 0 3px 0 var(--color-primary-dark), 0 0 0 3px var(--color-primary-dark) inset;
 }
 
-/* ---------- Booth ---------- */
 
 #boothContainer {
   border-radius: var(--radius-card);
@@ -186,7 +179,6 @@ button:disabled {
   margin: 12px;
 }
 
-/* ---------- Cursor star trail ---------- */
 
 .cursor-star {
   position: fixed;
@@ -197,7 +189,6 @@ button:disabled {
   transform: translate(-50%, -50%);
 }
 
-/* ---------- Button rows (two buttons side by side) ---------- */
 
 .button-row {
   display: flex;

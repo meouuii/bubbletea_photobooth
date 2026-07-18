@@ -1,5 +1,3 @@
-// ---------- 1. Cursor trail of stars ----------
-
 const starChars = ['✦', '✧', '⋆', '✩','★', '☆', '✫', '✬', '✭', '✮', '✯'];
 let lastStarTime = 0;
 
@@ -27,7 +25,7 @@ document.addEventListener('mousemove', (e) => {
   });
 });
 
-// ---------- 2. Proximity scale on buttons ----------
+
 
 const proximityRadius = 90;
 const maxScale = 1.15;
@@ -48,7 +46,6 @@ document.addEventListener('mousemove', (e) => {
   });
 });
 
-// ---------- 3. Cursor-driven perspective tilt on the landing logo ----------
 
 const landingLogo = document.getElementById('landingLogo');
 const landingViewEl = document.getElementById('landingView');
@@ -72,7 +69,6 @@ landingViewEl.addEventListener('mouseleave', () => {
   gsap.to(landingLogo, { rotateX: 0, rotateY: 0, duration: 0.6, ease: 'power3.out' });
 });
 
-// ---------- 4. Smooth scrolling for the scrolling right-hand panels ----------
 
 function initSmoothScroll(container) {
   container.addEventListener('wheel', (e) => {
