@@ -1,0 +1,211 @@
+:root {
+  --color-primary: #a8c5e0;
+  --color-primary-dark: #7fa8cf;
+  --color-accent: #ffffff;
+  --color-text: #3d4a5c;
+  --color-button-bg: #ffffff;
+  --color-button-selected: #a8c5e0;
+  --radius-bubbly: 999px;
+  --radius-card: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--color-text);
+  background-image: url('./assets/ui/pageBg.jpg');
+  background-repeat: repeat;
+  background-size: 700px auto;
+}
+
+/* ---------- Header logo (non-landing pages) ---------- */
+
+#appHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 14px 0 8px 18px;
+}
+
+#logo {
+  height: 170px;
+}
+
+body.view-landing #appHeader {
+  display: none;
+}
+
+/* ---------- Landing page ---------- */
+
+#landingView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 28px;
+  position: relative;
+}
+
+#landingLogo {
+  height: 550px;
+}
+
+/* ---------- Buttons: bubbly base style ---------- */
+
+button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  border-radius: var(--radius-bubbly);
+  padding: 12px 22px;
+  cursor: pointer;
+  background: var(--color-button-bg);
+  color: var(--color-text);
+  box-shadow: 0 4px 0 var(--color-primary-dark);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+button:hover:not(:disabled) {
+  background: var(--color-primary);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--color-primary-dark);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+#startBigBtn {
+  font-size: 22px;
+  padding: 18px 48px;
+  background: var(--color-primary);
+  box-shadow: 0 6px 0 var(--color-primary-dark);
+}
+
+/* ---------- Two-column workspace: fixed left, scrolling right ---------- */
+
+.workspace {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.workspace-left {
+  position: sticky;
+  top: 20px;
+  flex: 0 0 480px;
+}
+
+.workspace-right {
+  flex: 1;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* ---------- Section layout: title, then a grid of items ---------- */
+
+.control-section {
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.asset-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ---------- Thumbnail-style asset buttons ---------- */
+
+.asset-btn {
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border-radius: var(--radius-card);
+  background: var(--color-button-bg);
+  box-shadow: 0 3px 0 var(--color-primary-dark);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.asset-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.asset-btn.selected {
+  background: var(--color-button-selected);
+  box-shadow: 0 3px 0 var(--color-primary-dark), 0 0 0 3px var(--color-primary-dark) inset;
+}
+
+/* ---------- Booth ---------- */
+
+#boothContainer {
+  border-radius: var(--radius-card);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+#shootingView, #previewView, #editingView, #resultView {
+  padding-bottom: 40px;
+}
+
+#resultView {
+  text-align: center;
+}
+
+#resultPreview img {
+  border-radius: var(--radius-card);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  margin: 12px;
+}
+
+/* ---------- Cursor star trail ---------- */
+
+.cursor-star {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  color: rgb(245, 201, 80);
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- Button rows (two buttons side by side) ---------- */
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px auto;
+}
+
+.button-row button {
+  margin: 0;
+}

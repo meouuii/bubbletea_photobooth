@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photobooth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<header id="appHeader">
+  <img id="logo" src="./assets/ui/logo.png" alt="Snap Booth">
+</header>
+
+<canvas id="canvas" style="display:none;"></canvas>
+
+<div id="landingView">
+  <img id="landingLogo" src="./assets/ui/logo.png" alt="Snap Booth">
+  <button id="startBigBtn">Start</button>
+</div>
+
+<div id="shootingView" style="display:none;">
+  <div class="workspace">
+
+    <div class="workspace-left">
+      <div id="boothContainer" style="position:relative; width:480px; aspect-ratio: 4/3; overflow:hidden;">
+        <video id="video" autoplay playsinline style="display:none;width:100%; height:100%; object-fit:cover;"></video>
+        <canvas id="compositeCanvas" style="position:absolute; top:0; left:0; transform: scaleX(-1);width:100%; height:100%; object-fit:cover;"></canvas>
+        <canvas id="overlay" style="position:absolute; top:0; left:0; transform: scaleX(-1);width:100%; height:100%; object-fit:cover;"></canvas>
+        <div id="countdownDisplay" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; align-items:center; justify-content:center; font-size:80px; color:white; background:rgba(0,0,0,0.3);"></div>
+      </div>
+    </div>
+
+    <div class="workspace-right">
+      <section class="control-section">
+        <div class="section-title">Stickers</div>
+        <div id="stickerButtons" class="asset-grid"></div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Background</div>
+        <div id="bgButtons" class="asset-grid"></div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Orientation</div>
+        <div id="orientationButtons" class="asset-grid">
+          <button data-orientation="landscape">Landscape</button>
+          <button data-orientation="portrait">Portrait</button>
+        </div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Number of Photos</div>
+        <div id="countButtons" class="asset-grid">
+          <button data-count="1">1</button>
+          <button data-count="2">2</button>
+          <button data-count="3">3</button>
+          <button data-count="4">4</button>
+          <button data-count="5">5</button>
+          <button data-count="6">6</button>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <div class="button-row">
+    <button id="captureBtn">Take Photo</button>
+    <button class="start-over-btn">Start Over</button>
+  </div>
+</div>
+
+<div id="previewView" style="display:none;">
+  <div class="workspace">
+    <div class="workspace-left">
+      <div id="photos"></div>
+    </div>
+  </div>
+
+  <div class="button-row">
+    <button id="continueToEditingBtn">Continue to Editing</button>
+    <button class="start-over-btn">Start Over</button>
+  </div>
+</div>
+
+<div id="editingView" style="display:none;">
+  <div class="workspace">
+
+    <div class="workspace-left">
+      <div id="editingPreview"></div>
+    </div>
+
+    <div class="workspace-right">
+      <section class="control-section">
+        <div class="section-title">Filters</div>
+        <div id="filterButtons" class="asset-grid">
+          <button data-filter="none">No Filter</button>
+          <button data-filter="mono">B&amp;W</button>
+          <button data-filter="sepia">Sepia</button>
+          <button data-filter="vintage">Vintage</button>
+        </div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Frames</div>
+        <div id="frameButtons" class="asset-grid"></div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Layout</div>
+        <div id="layoutButtons" class="asset-grid">
+          <button data-layout="none">Separate</button>
+          <button data-layout="stripVertical">Strip</button>
+          <button data-layout="grid2col">Grid</button>
+        </div>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Whitespace</div>
+        <button id="whitespaceToggleBtn">Whitespace: On</button>
+      </section>
+
+      <section class="control-section">
+        <div class="section-title">Strip Background</div>
+        <input type="color" id="stripColorPicker" value="#ffffff">
+        <div id="stripBgImageButtons" class="asset-grid"></div>
+      </section>
+    </div>
+
+  </div>
+
+  <div class="button-row">
+    <button id="doneBtn">Done</button>
+    <button class="start-over-btn">Start Over</button>
+  </div>
+</div>
+
+<div id="resultView" style="display:none;">
+  <section class="control-section">
+    <div class="section-title">Your Final Result</div>
+    <div id="resultPreview"></div>
+  </section>
+
+  <div class="button-row">
+    <button id="backToEditingBtn">Back to Editing</button>
+    <button id="finalSaveBtn">Save</button>
+  </div>
+  <button class="start-over-btn">Start Over</button>
+</div>
+
+<script src="./stripBackgrounds.js"></script>
+<script src="./framesRegistry.js"></script>
+<script src="./stripBuilder.js"></script>
+<script src="./camera.js"></script>
+<script type="module" src="./faceTracking.js"></script>
+<script type="module" src="./bgRemoval.js"></script>
+<script src="./animations.js"></script>
+
+</body>
+</html>
