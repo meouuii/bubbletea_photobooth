@@ -200,3 +200,8 @@ button:disabled {
 .button-row button {
   margin: 0;
 }
+
+
+#boothContainer {
+  max-width: 100%;
+}

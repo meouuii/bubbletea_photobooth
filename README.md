@@ -2,17 +2,23 @@
 
 A cute, browser-based photobooth built entirely in vanilla HTML, CSS, and JavaScript, with real-time face tracking, live background replacement, and a full editing pipeline.
 
-**🔗 Live demo:**
+**🔗 Live demo:** https://meouuii.github.io/bubbletea_photobooth/
 ---
 
 ## What it does
 
 -Take a full sequence of photos with a real countdown, just like a real photobooth
+
 -Live face-tracking stickers (glasses, ears, crowns, and more) that scale and rotate with your face in real time
+
 -Live background removal/replacement, swap your real background for one of several presets, straight from the camera feed
+
 -Choose landscape or portrait mode before shooting
+
 -After capturing: apply filters (B&W, sepia, a custom vintage grain/vignette effect), add decorative frames, and arrange your photos into a strip or grid layout
+
 -Customize the strip's background, a solid color or one of several pattern images
+
 -Save your final result as a downloadable image
 
 ## Tech used
