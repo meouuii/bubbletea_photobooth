@@ -1,4 +1,4 @@
-import { FaceLandmarker, FilesetResolver } from './node_modules/@mediapipe/tasks-vision/vision_bundle.mjs';
+import { FaceLandmarker, FilesetResolver } from 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.35/vision_bundle.mjs';
 import { getStickerTransform, getForeheadAnchorTransform } from './stickerMath.js';
 import { stickerRegistry } from './stickers.js';
 
@@ -45,7 +45,7 @@ stickerButtons.addEventListener('click', (event) => {
 });
 
 async function setupFaceLandmarker() {
-  const vision = await FilesetResolver.forVisionTasks('./node_modules/@mediapipe/tasks-vision/wasm');
+  const vision = await FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.35/wasm');
   faceLandmarker = await FaceLandmarker.createFromOptions(vision, {
     baseOptions: { modelAssetPath: './models/face_landmarker.task' },
     runningMode: 'VIDEO',
