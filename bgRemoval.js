@@ -1,4 +1,4 @@
-import { ImageSegmenter, FilesetResolver } from './node_modules/@mediapipe/tasks-vision/vision_bundle.mjs';
+import { ImageSegmenter, FilesetResolver } from 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.35/vision_bundle.mjs';
 import { backgroundRegistry } from './backgrounds.js';
 
 const video = document.getElementById('video');
@@ -47,7 +47,7 @@ bgButtons.addEventListener('click', (event) => {
 });
 
 async function setupImageSegmenter() {
-  const vision = await FilesetResolver.forVisionTasks('./node_modules/@mediapipe/tasks-vision/wasm');
+  const vision = await FilesetResolver.forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.35/wasm');
   imageSegmenter = await ImageSegmenter.createFromOptions(vision, {
     baseOptions: { modelAssetPath: './models/selfie_segmenter.tflite' },
     runningMode: 'VIDEO',
