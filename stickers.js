@@ -38,6 +38,13 @@ export const stickerRegistry = [
     placements: [
       { type: 'landmarks', indexA: 205, indexB:425, referenceDistance: 160, offsetY: -70, offsetX:-10 }
     ]
+  },{
+    name: 'glasses6',
+    src: './assets/stickers/glasses6.png',
+    image: new Image(),
+    placements: [
+      { type: 'landmarks', indexA: 205, indexB:425, referenceDistance: 250, offsetY: -145, offsetX:10 }
+    ]
   },
   {
     name: 'star',
@@ -61,6 +68,13 @@ export const stickerRegistry = [
     image: new Image(),
     placements: [
       { type: 'forehead', referenceDistance: 450, extensionRatio: 0.5 }
+    ]
+  },{
+    name: 'ears2',
+    src: './assets/stickers/ears2.png',
+    image: new Image(),
+    placements: [
+      { type: 'landmarks', indexA: 205, indexB:425, referenceDistance: 150, offsetY: -90, offsetX: -10 }
     ]
   },
   {
@@ -151,6 +165,52 @@ export const stickerRegistry = [
     image: new Image(),
     placements: [
       { type: 'landmarks', indexA: 205, indexB:425, referenceDistance: 160, offsetY: -130}
+    ]
+  },
+  {
+    name: 'sims',
+    src: './assets/stickers/sims.png',
+    image: new Image(),
+    placements: [
+      { type: 'forehead', referenceDistance: 600, extensionRatio: 0.05,  offsetY:-320}
+    ]
+  },{
+    name: 'hat1',
+    src: './assets/stickers/hat1.png',
+    image: new Image(),
+    placements: [
+      { type: 'landmarks', indexA: 220, indexB: 440, referenceDistance: 22 ,offsetY:-50}
+    ]
+  },{
+    name: 'hat2',
+    src: './assets/stickers/hat2.png',
+    image: new Image(),
+    placements: [
+      { type: 'landmarks', indexA: 220, indexB: 440, referenceDistance: 27 ,offsetY:-30}
+    ]
+  },
+  {
+    name: 'hat3',
+    src: './assets/stickers/hat3.png',
+    image: new Image(),
+    placements: [
+      { type: 'forehead', referenceDistance: 220, extensionRatio: 0.5, offsetY: 30, offsetX: -10 }
+    ]
+  },
+  {
+    name: 'bandage',
+    src: './assets/stickers/bandage.png',
+    image: new Image(),
+    placements: [
+      { type: 'landmarks', indexA: 168, indexB: 1, referenceDistance: 170, offsetX:-5 ,offsetY:6, offsetAngle:4.76}
+    ]
+  },
+  {
+    name: 'mask',
+    src: './assets/stickers/mask.png',
+    image: new Image(),
+    placements: [
+      { type: 'landmarks', indexA: 205, indexB:425, referenceDistance: 210, offsetY: -60, offsetX:30}
     ]
   }
 ];

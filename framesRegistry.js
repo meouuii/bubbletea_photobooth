@@ -12,7 +12,7 @@ for (let i = 1; i <= 17; i++) {
 
 const portraitFrames = [];
 
-for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 10; i++) {
   const frame = {
     name: `portraitFrame${i}`,
     src: `./assets/frames/portrait frames/frame (${i}).png`,
