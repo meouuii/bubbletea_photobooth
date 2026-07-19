@@ -52,6 +52,7 @@ function setView(viewName) {
 setView('landing');
 
 startBigBtn.addEventListener('click', () => {
+  startCamera();
   setView('shooting');
 });
 
@@ -60,7 +61,6 @@ async function startCamera() {
   video.srcObject = stream;
 }
 
-startCamera();
 
 const orientationAspects = {
   landscape: 4 / 3,
